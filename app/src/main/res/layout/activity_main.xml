@@ -8,10 +8,11 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/divide12"
+        android:id="@+id/equal"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/sky_blue"
         android:text="="
         android:textSize="@dimen/text_size"
@@ -19,191 +20,216 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/divide14"
+        android:id="@+id/pi"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/sky_blue"
-        android:text="<--"
-        android:textSize="34sp"
+        android:text="𝝿"
+        android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/divide12" />
+        app:layout_constraintEnd_toStartOf="@+id/equal" />
 
     <Button
-        android:id="@+id/divide13"
+        android:id="@+id/decimal"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/sky_blue"
         android:text="."
         android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/divide14" />
+        app:layout_constraintEnd_toStartOf="@+id/pi" />
 
     <Button
-        android:id="@+id/divide11"
+        android:id="@+id/zero"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/sky_blue"
         android:text="0"
         android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/divide13"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/decimal"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/divide7"
+        android:id="@+id/one"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
+        android:layout_marginStart="4dp"
         android:backgroundTint="@color/sky_blue"
         android:text="1"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide11"
-        tools:layout_editor_absoluteX="21dp" />
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/divide10"
+        android:id="@+id/plus"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
+        android:layout_marginEnd="12dp"
         android:backgroundTint="@color/sky_blue"
         android:text="+"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide12"
-        tools:layout_editor_absoluteX="317dp" />
+        app:layout_constraintBottom_toTopOf="@+id/equal"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/divide8"
+        android:id="@+id/three"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/sky_blue"
         android:text="3"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide14"
-        tools:layout_editor_absoluteX="227dp" />
+        app:layout_constraintBottom_toTopOf="@+id/pi"
+        app:layout_constraintEnd_toStartOf="@+id/plus" />
 
     <Button
-        android:id="@+id/divide9"
+        android:id="@+id/two"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:backgroundTint="@color/sky_blue"
         android:text="2"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide13"
-        tools:layout_editor_absoluteX="129dp" />
+        app:layout_constraintBottom_toTopOf="@+id/decimal"
+        app:layout_constraintEnd_toStartOf="@+id/three"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/divide2"
+        android:id="@+id/multiply"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="12dp"
         android:backgroundTint="@color/sky_blue"
         android:text="X"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide3"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952" />
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
-        android:id="@+id/percent2"
+        android:id="@+id/nine"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/sky_blue"
         android:text="9"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide6"
-        app:layout_constraintEnd_toStartOf="@+id/divide2"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintEnd_toStartOf="@+id/multiply"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
-        android:id="@+id/parentheses2"
+        android:id="@+id/eight"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:backgroundTint="@color/sky_blue"
         android:text="8"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide5"
-        app:layout_constraintEnd_toStartOf="@+id/percent2"
-        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintEnd_toStartOf="@+id/nine"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toEndOf="@+id/clear"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
-        android:id="@+id/clear2"
+        android:id="@+id/seven"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginBottom="4dp"
         android:backgroundTint="@color/sky_blue"
         android:text="7"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide4"
-        app:layout_constraintEnd_toStartOf="@+id/parentheses2"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintEnd_toStartOf="@+id/eight"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/divide4"
+        android:id="@+id/four"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/sky_blue"
         android:text="4"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide7"
-        app:layout_constraintEnd_toStartOf="@+id/divide5"
-        app:layout_constraintHorizontal_bias="0.82"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintEnd_toStartOf="@+id/five"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
-        android:id="@+id/divide3"
+        android:id="@+id/minus"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="12dp"
         android:backgroundTint="@color/sky_blue"
         android:text="-"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide10"
-        tools:layout_editor_absoluteX="317dp" />
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
-        android:id="@+id/divide5"
+        android:id="@+id/five"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/sky_blue"
         android:text="5"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide9"
-        app:layout_constraintEnd_toStartOf="@+id/divide6" />
+        app:layout_constraintBottom_toTopOf="@+id/two"
+        app:layout_constraintEnd_toStartOf="@+id/six"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
-        android:id="@+id/divide6"
+        android:id="@+id/six"
+        android:onClick="numPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/sky_blue"
         android:text="6"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide8"
-        app:layout_constraintEnd_toStartOf="@+id/divide3" />
+        app:layout_constraintBottom_toTopOf="@+id/three"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983" />
 
     <TextView
-        android:layout_width="411dp"
-        android:layout_height="229dp"
+        android:id="@+id/output"
+        android:layout_width="412dp"
+        android:layout_height="226dp"
         android:background="@color/grey"
-        android:text="Hello World!"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -212,27 +238,14 @@
         android:id="@+id/divide"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:backgroundTint="@color/sky_blue"
         android:text="÷"
         android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/divide2"
+        app:layout_constraintBottom_toTopOf="@+id/multiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
-
-    <Button
-        android:id="@+id/percent"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_length"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="@color/sky_blue"
-        android:text="%"
-        android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/percent2"
-        app:layout_constraintEnd_toStartOf="@+id/divide"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/parentheses"
@@ -242,9 +255,9 @@
         android:backgroundTint="@color/sky_blue"
         android:text="( )"
         android:textSize="42sp"
-        app:layout_constraintBottom_toTopOf="@+id/parentheses2"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
         app:layout_constraintEnd_toStartOf="@+id/percent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toEndOf="@+id/clear"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -253,13 +266,26 @@
         android:id="@+id/clear"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="4dp"
         android:backgroundTint="@color/sky_blue"
         android:text="AC"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/clear2"
+        app:layout_constraintBottom_toTopOf="@+id/seven"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_length"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/sky_blue"
+        android:text="%"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintEnd_toStartOf="@+id/divide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
