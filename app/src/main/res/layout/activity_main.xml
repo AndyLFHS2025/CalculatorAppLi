@@ -9,6 +9,7 @@
 
     <Button
         android:id="@+id/equal"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="12dp"
@@ -21,6 +22,7 @@
 
     <Button
         android:id="@+id/pi"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
@@ -33,6 +35,7 @@
 
     <Button
         android:id="@+id/decimal"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
@@ -45,7 +48,7 @@
 
     <Button
         android:id="@+id/zero"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginBottom="16dp"
@@ -59,7 +62,7 @@
 
     <Button
         android:id="@+id/one"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginStart="4dp"
@@ -82,7 +85,7 @@
 
     <Button
         android:id="@+id/three"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
@@ -94,7 +97,7 @@
 
     <Button
         android:id="@+id/two"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:backgroundTint="@color/sky_blue"
@@ -122,7 +125,7 @@
 
     <Button
         android:id="@+id/nine"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
@@ -136,7 +139,7 @@
 
     <Button
         android:id="@+id/eight"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:backgroundTint="@color/sky_blue"
@@ -151,7 +154,7 @@
 
     <Button
         android:id="@+id/seven"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginBottom="4dp"
@@ -165,7 +168,7 @@
 
     <Button
         android:id="@+id/four"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:backgroundTint="@color/sky_blue"
@@ -193,7 +196,7 @@
 
     <Button
         android:id="@+id/five"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="4dp"
@@ -207,7 +210,7 @@
 
     <Button
         android:id="@+id/six"
-        android:onClick="numPressed"
+        android:onClick="buttonPressed"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="8dp"
@@ -240,7 +243,7 @@
         android:layout_height="@dimen/button_length"
         android:layout_marginEnd="12dp"
         android:backgroundTint="@color/sky_blue"
-        android:text="÷"
+        android:text="/"
         android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toTopOf="@+id/multiply"
         app:layout_constraintEnd_toEndOf="parent"
@@ -253,8 +256,8 @@
         android:layout_height="@dimen/button_length"
         android:layout_marginTop="44dp"
         android:backgroundTint="@color/sky_blue"
-        android:text="( )"
-        android:textSize="42sp"
+        android:text="e"
+        android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toTopOf="@+id/eight"
         app:layout_constraintEnd_toStartOf="@+id/percent"
         app:layout_constraintHorizontal_bias="0.419"
