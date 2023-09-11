@@ -11,86 +11,67 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView answerText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView output = findViewById(R.id.output);
-
-    }
-
-    public void buttonPressed(View view) {
-        int numInput = -1;
+        answerText = findViewById(R.id.output);
+        String firstNum = "";
+        String secondNum = "";
         String expression = "";
-       if (view.getId() == R.id.one) {
-           Log.i("blue monkey", "i");
-            numInput = 1;
-       }
-       else if (view.getId() == R.id.two) {
-           Log.i("blue monkey", "ii");
-            numInput = 2;
-       }
-       else if (view.getId() == R.id.three) {
-           Log.i("blue monkey", "iii");
-           numInput = 3;
-       }
-       else if (view.getId() == R.id.four) {
-           Log.i("blue monkey", "iiii");
-           numInput = 4;
-       }
-       else if (view.getId() == R.id.five) {
-           Log.i("blue monkey", "iiiii");
-           numInput = 5;
-       }
-       else if (view.getId() == R.id.six) {
-           Log.i("blue monkey", "iiiiii");
-           numInput = 6;
-       }
-       else if (view.getId() == R.id.seven) {
-           Log.i("blue monkey", "iiiiiii");
-           numInput = 7;
-       }
-       else if (view.getId() == R.id.eight) {
-           Log.i("blue monkey", "iiiiiiii");
-           numInput = 8;
-       }
-       else if (view.getId() == R.id.nine) {
-           Log.i("blue monkey", "iiiiiiiii");
-           numInput = 9;
-       }
-       else if (view.getId() == R.id.zero) {
-           Log.i("blue monkey", "zero");
-           numInput = 0;
-       }
-       else if (view.getId() == R.id.pi) {
-           numInput = 3;
-       }
-
-       else if (view.getId() == R.id.plus) {
-           expression = "+";
-        }
-       else if (view.getId() == R.id.minus) {
-           expression = "-";
-       }
-       else if (view.getId() == R.id.multiply) {
-           expression = "x";
-       }
-       else if (view.getId() == R.id.divide) {
-           expression = "/";
-       }
-       else if (view.getId() == R.id.percent) {
-           expression = "%";
-       }
-       else if (view.getId() == R.id.parentheses) {
-           expression = "+";
-       }
-
-
-
+        String output = "";
     }
 
-    public void calculate(View view, int param1, int param2, String exp) {
+    public String expressionClicked(View view) {
+        Button button = (Button)view;
+        String expression = button.getText().toString();
+        answerText.setText(answerText.getText() + " " + expression + " ");
+        return expression;
+    }
+
+    public Double numClicked(View view) {
+
+        Button button = (Button)view;
+        String number = button.getText().toString();
+        answerText.setText(answerText.getText().toString() + number);
+
+        if (number.equals("𝝿")) {
+            number = "3.14";
+        }
+
+        if (number.equals("e")) {
+            number = "2.72";
+        }
+        return Double.parseDouble(number);
+    }
+
+    public void calculate(String param1, String param2, String exp) {
+        Double result;
+        Double number1 = Double.parseDouble(param1);
+        Double number2 = Double.parseDouble(param2);
+
+
+        if (exp.equals("/")) {
+            result = number1/number2;
+        }
+
+        else if (exp.equals("X")) {
+            result = number1 * number2;
+        }
+
+        else if (exp.equals("+")) {
+            result = number1 + number2;
+        }
+
+        else if (exp.equals("-")) {
+            result = number1 - number2;
+        }
+
+        else {
+            result = number1 % number2;
+        }
 
     }
 
