@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             answerInText = false;
         }
 
-        Button button = (Button)view;
+        Button button = (Button) view;
         String number = button.getText().toString();
         answerText.setText(answerText.getText().toString() + number);
     }
@@ -70,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (expressionIndex == -1) {
             answerText.setText("Syntax error");
-        }
-
-        else {
+        } else {
 
             param1 = input.substring(0, expressionIndex - 1);
             param2 = input.substring(expressionIndex + 1);
@@ -88,12 +86,11 @@ public class MainActivity extends AppCompatActivity {
                     Double coeff;
                     if (param1.length() == 0) {
                         coeff = 1.0;
-                    }
-                    else {
+                    } else {
                         coeff = Double.parseDouble(param1);
                     }
 
-                    coeff *=3.142;
+                    coeff *= 3.142;
                     param1 = Double.toString(coeff);
                 }
 
@@ -102,8 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     Double coeff;
                     if (param1.length() == 0) {
                         coeff = 1.0;
-                    }
-                    else {
+                    } else {
                         coeff = Double.parseDouble(param1);
                     }
 
@@ -118,8 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     Double coeff;
                     if (param2.length() == 0) {
                         coeff = 1.0;
-                    }
-                    else {
+                    } else {
                         coeff = Double.parseDouble(param2);
                     }
 
@@ -132,8 +127,7 @@ public class MainActivity extends AppCompatActivity {
                     Double coeff;
                     if (param2.length() == 0) {
                         coeff = 1.0;
-                    }
-                    else {
+                    } else {
                         coeff = Double.parseDouble(param2);
                     }
                     coeff *= 2.718;
@@ -143,9 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (param2.equals("") || param1.equals("")) {
                 answerText.setText("Syntax error");
-            }
-
-            else {
+            } else {
 
                 Double number1 = Double.parseDouble(param1);
                 Double number2 = Double.parseDouble(param2);
