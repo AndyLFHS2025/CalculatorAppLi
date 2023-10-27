@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         answerInText = false;
     }
 
+
+    // Description: Logs when an expression button has been clicked and adds it into the input text view
+    //              and formats expression to be separated by spaces from numbers (except for decimal
+    //              where decimal will just be added to number)
     public void expressionClicked(View view) {
         Button button = (Button) view;
         String exp = button.getText().toString();
@@ -41,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Description: Logs when a number/special character has been clicked and adds them into the text view
+    //              input. Also clears previous answers if there are any found.
     public void numClicked(View view) {
 
         if (answerInText) {
@@ -53,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         answerText.setText(answerText.getText().toString() + number);
     }
 
+    // Description: Calculates given equation within input box. Works with decimals and special characters
+    //              like pi and e. If an equation is missing a number or expression, a syntax error is thrown
     public void calculate(View view) {
         char[] expressions = {'+', '-', 'X', '/', '%'};
         Double result;
@@ -110,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (indexETwo > -1 || indexPiTwo > -1) {
                 if (indexPiTwo > -1) {
-                    param2 = param2.substring(0, indexPiTwo);
+                    param2 = param2.substring(1, indexPiTwo);
                     Double coeff;
                     if (param2.length() == 0) {
                         coeff = 1.0;
@@ -123,13 +131,14 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (indexETwo > -1) {
-                    param2 = param2.substring(0, indexETwo);
+                    param2 = param2.substring(1, indexETwo);
                     Double coeff;
                     if (param2.length() == 0) {
                         coeff = 1.0;
                     } else {
                         coeff = Double.parseDouble(param2);
                     }
+
                     coeff *= 2.718;
                     param2 = Double.toString(coeff);
                 }
@@ -165,10 +174,12 @@ public class MainActivity extends AppCompatActivity {
         answerInText = true;
     }
 
+    // Description: Clears input text view of answers
     public void clearAnswerText(View view) {
         answerText.setText("");
     }
 
+    // Description: Resets parameters of inputted numbers/expressions
     public void resetParameters(View view) {
         param1 = "";
         param2 = "";
